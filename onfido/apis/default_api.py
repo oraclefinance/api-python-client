@@ -122,7 +122,6 @@ class DefaultApi(object):
         if ('report_id' not in params) or (params['report_id'] is None):
             raise ValueError("Missing the required parameter `report_id` when calling `cancel_report`")
 
-
         collection_formats = {}
 
         resource_path = '/checks/{check_id}/reports/{report_id}/cancel'.replace('{format}', 'json')
@@ -142,31 +141,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def create_applicant(self, **kwargs):
         """
@@ -231,7 +230,6 @@ class DefaultApi(object):
             params[key] = val
         del params['kwargs']
 
-
         collection_formats = {}
 
         resource_path = '/applicants'.replace('{format}', 'json')
@@ -249,31 +247,31 @@ class DefaultApi(object):
             body_params = params['data']
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Applicant',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Applicant',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def create_check(self, applicant_id, **kwargs):
         """
@@ -343,7 +341,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `create_check`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/checks'.replace('{format}', 'json')
@@ -363,31 +360,31 @@ class DefaultApi(object):
             body_params = params['data']
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Check',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Check',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def create_webhook(self, **kwargs):
         """
@@ -452,7 +449,6 @@ class DefaultApi(object):
             params[key] = val
         del params['kwargs']
 
-
         collection_formats = {}
 
         resource_path = '/webhooks'.replace('{format}', 'json')
@@ -470,31 +466,31 @@ class DefaultApi(object):
             body_params = params['data']
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Webhook',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Webhook',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def destroy_applicant(self, applicant_id, **kwargs):
         """
@@ -562,7 +558,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `destroy_applicant`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}'.replace('{format}', 'json')
@@ -580,31 +575,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'DELETE',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def download_document(self, applicant_id, document_id, **kwargs):
         """
@@ -677,7 +672,6 @@ class DefaultApi(object):
         if ('document_id' not in params) or (params['document_id'] is None):
             raise ValueError("Missing the required parameter `document_id` when calling `download_document`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/documents/{document_id}/download'.replace('{format}', 'json')
@@ -697,31 +691,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['image/png', 'image/jpeg', 'applicant/pdf'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='file',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def download_live_photo(self, live_photo_id, **kwargs):
         """
@@ -789,7 +783,6 @@ class DefaultApi(object):
         if ('live_photo_id' not in params) or (params['live_photo_id'] is None):
             raise ValueError("Missing the required parameter `live_photo_id` when calling `download_live_photo`")
 
-
         collection_formats = {}
 
         resource_path = '/live_photos/{live_photo_id}/download'.replace('{format}', 'json')
@@ -807,31 +800,140 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='file',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
+
+    def download_live_video(self, live_video_id, **kwargs):
+        """
+        Download live video
+        Live videos are downloaded using this endpoint.
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.download_live_photo(live_video_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str live_video_id: The live video’s unique identifier. (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.download_live_video_with_http_info(live_video_id, **kwargs)
+        else:
+            (data) = self.download_live_video_with_http_info(live_video_id, **kwargs)
+            return data
+
+    def download_live_video_with_http_info(self, live_video_id, **kwargs):
+        """
+        Download live video
+        Live videos are downloaded using this endpoint.
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.download_live_photo_with_http_info(live_video_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param str live_video_id: The live video’s unique identifier. (required)
+        :return: file
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['live_video_id']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method download_live_photo" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'live_video_id' is set
+        if ('live_video_id' not in params) or (params['live_video_id'] is None):
+            raise ValueError("Missing the required parameter `live_video_id` when calling `download_live_photo`")
+
+        collection_formats = {}
+
+        resource_path = '/live_videos/{live_video_id}/download'.replace('{format}', 'json')
+        path_params = {}
+        if 'live_video_id' in params:
+            path_params['live_video_id'] = params['live_video_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client. \
+            select_header_accept(['application/json'])
+        if not header_params['Accept']:
+            del header_params['Accept']
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client. \
+            select_header_content_type([])
+
+        # Authentication setting
+        auth_settings = ['Token']
+
+        return self.api_client.call_api(resource_path, 'GET',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='file',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_addresses(self, postcode, **kwargs):
         """
@@ -899,7 +1001,6 @@ class DefaultApi(object):
         if ('postcode' not in params) or (params['postcode'] is None):
             raise ValueError("Missing the required parameter `postcode` when calling `find_addresses`")
 
-
         collection_formats = {}
 
         resource_path = '/addresses/pick'.replace('{format}', 'json')
@@ -917,31 +1018,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='GenericAddressesList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='GenericAddressesList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_applicant(self, applicant_id, **kwargs):
         """
@@ -1009,7 +1110,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `find_applicant`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}'.replace('{format}', 'json')
@@ -1027,31 +1127,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Applicant',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Applicant',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_check(self, applicant_id, check_id, **kwargs):
         """
@@ -1124,7 +1224,6 @@ class DefaultApi(object):
         if ('check_id' not in params) or (params['check_id'] is None):
             raise ValueError("Missing the required parameter `check_id` when calling `find_check`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/checks/{check_id}'.replace('{format}', 'json')
@@ -1144,31 +1243,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Check',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Check',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_document(self, applicant_id, document_id, **kwargs):
         """
@@ -1241,7 +1340,6 @@ class DefaultApi(object):
         if ('document_id' not in params) or (params['document_id'] is None):
             raise ValueError("Missing the required parameter `document_id` when calling `find_document`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/documents/{document_id}'.replace('{format}', 'json')
@@ -1261,31 +1359,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Document',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Document',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_live_photo(self, live_photo_id, **kwargs):
         """
@@ -1353,7 +1451,6 @@ class DefaultApi(object):
         if ('live_photo_id' not in params) or (params['live_photo_id'] is None):
             raise ValueError("Missing the required parameter `live_photo_id` when calling `find_live_photo`")
 
-
         collection_formats = {}
 
         resource_path = '/live_photos/{live_photo_id}'.replace('{format}', 'json')
@@ -1371,31 +1468,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='LivePhoto',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='LivePhoto',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_report(self, check_id, report_id, **kwargs):
         """
@@ -1468,7 +1565,6 @@ class DefaultApi(object):
         if ('report_id' not in params) or (params['report_id'] is None):
             raise ValueError("Missing the required parameter `report_id` when calling `find_report`")
 
-
         collection_formats = {}
 
         resource_path = '/checks/{check_id}/reports/{report_id}'.replace('{format}', 'json')
@@ -1488,31 +1584,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Report',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Report',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_report_type_group(self, report_type_group_id, **kwargs):
         """
@@ -1578,8 +1674,8 @@ class DefaultApi(object):
         del params['kwargs']
         # verify the required parameter 'report_type_group_id' is set
         if ('report_type_group_id' not in params) or (params['report_type_group_id'] is None):
-            raise ValueError("Missing the required parameter `report_type_group_id` when calling `find_report_type_group`")
-
+            raise ValueError(
+                "Missing the required parameter `report_type_group_id` when calling `find_report_type_group`")
 
         collection_formats = {}
 
@@ -1598,31 +1694,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='ReportTypeGroup',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ReportTypeGroup',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def find_webhook(self, webhook_id, **kwargs):
         """
@@ -1690,7 +1786,6 @@ class DefaultApi(object):
         if ('webhook_id' not in params) or (params['webhook_id'] is None):
             raise ValueError("Missing the required parameter `webhook_id` when calling `find_webhook`")
 
-
         collection_formats = {}
 
         resource_path = '/webhooks/{webhook_id}'.replace('{format}', 'json')
@@ -1708,31 +1803,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Webhook',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Webhook',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_applicants(self, **kwargs):
         """
@@ -1801,7 +1896,6 @@ class DefaultApi(object):
             params[key] = val
         del params['kwargs']
 
-
         collection_formats = {}
 
         resource_path = '/applicants'.replace('{format}', 'json')
@@ -1823,31 +1917,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='ApplicantsList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ApplicantsList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_checks(self, applicant_id, **kwargs):
         """
@@ -1919,7 +2013,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `list_checks`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/checks'.replace('{format}', 'json')
@@ -1941,31 +2034,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='ChecksList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ChecksList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_documents(self, applicant_id, **kwargs):
         """
@@ -2033,7 +2126,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `list_documents`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/documents'.replace('{format}', 'json')
@@ -2051,31 +2143,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='DocumentsList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='DocumentsList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_live_photos(self, applicant_id, **kwargs):
         """
@@ -2143,7 +2235,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `list_live_photos`")
 
-
         collection_formats = {}
 
         resource_path = '/live_photos'.replace('{format}', 'json')
@@ -2161,31 +2252,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='LivePhotosList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='LivePhotosList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_live_videos(self, applicant_id, **kwargs):
         """
@@ -2357,7 +2448,6 @@ class DefaultApi(object):
             params[key] = val
         del params['kwargs']
 
-
         collection_formats = {}
 
         resource_path = '/report_type_groups'.replace('{format}', 'json')
@@ -2373,31 +2463,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='ReportTypeGroupsList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ReportTypeGroupsList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_reports(self, check_id, **kwargs):
         """
@@ -2465,7 +2555,6 @@ class DefaultApi(object):
         if ('check_id' not in params) or (params['check_id'] is None):
             raise ValueError("Missing the required parameter `check_id` when calling `list_reports`")
 
-
         collection_formats = {}
 
         resource_path = '/checks/{check_id}/reports'.replace('{format}', 'json')
@@ -2483,31 +2572,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='ReportsList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='ReportsList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def list_webhooks(self, **kwargs):
         """
@@ -2570,7 +2659,6 @@ class DefaultApi(object):
             params[key] = val
         del params['kwargs']
 
-
         collection_formats = {}
 
         resource_path = '/webhooks'.replace('{format}', 'json')
@@ -2586,31 +2674,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'GET',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='WebhooksList',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='WebhooksList',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def restore_applicant(self, applicant_id, **kwargs):
         """
@@ -2678,7 +2766,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `restore_applicant`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/restore'.replace('{format}', 'json')
@@ -2696,31 +2783,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def resume_check(self, check_id, **kwargs):
         """
@@ -2788,7 +2875,6 @@ class DefaultApi(object):
         if ('check_id' not in params) or (params['check_id'] is None):
             raise ValueError("Missing the required parameter `check_id` when calling `resume_check`")
 
-
         collection_formats = {}
 
         resource_path = '/checks/{check_id}/resume'.replace('{format}', 'json')
@@ -2806,31 +2892,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def resume_report(self, check_id, report_id, **kwargs):
         """
@@ -2903,7 +2989,6 @@ class DefaultApi(object):
         if ('report_id' not in params) or (params['report_id'] is None):
             raise ValueError("Missing the required parameter `report_id` when calling `resume_report`")
 
-
         collection_formats = {}
 
         resource_path = '/checks/{check_id}/reports/{report_id}/resume'.replace('{format}', 'json')
@@ -2923,31 +3008,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type=None,
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type=None,
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def update_applicant(self, applicant_id, **kwargs):
         """
@@ -3017,7 +3102,6 @@ class DefaultApi(object):
         if ('applicant_id' not in params) or (params['applicant_id'] is None):
             raise ValueError("Missing the required parameter `applicant_id` when calling `update_applicant`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}'.replace('{format}', 'json')
@@ -3037,31 +3121,31 @@ class DefaultApi(object):
             body_params = params['data']
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type([])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'PUT',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Applicant',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Applicant',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def upload_document(self, applicant_id, type, **kwargs):
         """
@@ -3140,7 +3224,6 @@ class DefaultApi(object):
         if ('type' not in params) or (params['type'] is None):
             raise ValueError("Missing the required parameter `type` when calling `upload_document`")
 
-
         collection_formats = {}
 
         resource_path = '/applicants/{applicant_id}/documents'.replace('{format}', 'json')
@@ -3168,31 +3251,31 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='Document',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='Document',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
 
     def upload_live_photo(self, applicant_id, file, **kwargs):
         """
@@ -3268,8 +3351,8 @@ class DefaultApi(object):
         # verify the required parameter 'file' is set
         if ('file' not in params) or (params['file'] is None):
             if ('file_object' not in params) or (params['file_object'] is None):
-                raise ValueError("Missing the required parameter `file` or `file_object` when calling `upload_live_photo`")
-
+                raise ValueError(
+                    "Missing the required parameter `file` or `file_object` when calling `upload_live_photo`")
 
         collection_formats = {}
 
@@ -3294,28 +3377,28 @@ class DefaultApi(object):
         body_params = None
 
         # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
+        header_params['Accept'] = self.api_client. \
             select_header_accept(['application/json'])
         if not header_params['Accept']:
             del header_params['Accept']
 
         # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
+        header_params['Content-Type'] = self.api_client. \
             select_header_content_type(['multipart/form-data'])
 
         # Authentication setting
         auth_settings = ['Token']
 
         return self.api_client.call_api(resource_path, 'POST',
-                                            path_params,
-                                            query_params,
-                                            header_params,
-                                            body=body_params,
-                                            post_params=form_params,
-                                            files=local_var_files,
-                                            response_type='LivePhoto',
-                                            auth_settings=auth_settings,
-                                            callback=params.get('callback'),
-                                            _return_http_data_only=params.get('_return_http_data_only'),
-                                            _preload_content=params.get('_preload_content', True),
-                                            collection_formats=collection_formats)
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='LivePhoto',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        collection_formats=collection_formats)
