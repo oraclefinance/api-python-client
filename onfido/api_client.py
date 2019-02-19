@@ -538,8 +538,8 @@ class ApiClient(object):
                 group(1)
             path = os.path.join(os.path.dirname(path), filename)
 
-        with open(path, "w") as f:
-            f.write(response.data)
+        with open(path, "wb") as f:
+            f.write(response.urllib3_response.data)
 
         return path
 
