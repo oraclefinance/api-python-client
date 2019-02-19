@@ -4,7 +4,7 @@ from six import iteritems
 
 class LiveVideo(object):
     def __init__(self, id=None, created_at=None, applicant_id=None, href=None, download_href=None, file_name=None,
-                 file_size=None, file_type=None):
+                 file_size=None, file_type=None, challenge=None):
         """
         LivePhoto - a model defined in Swagger
 
@@ -21,7 +21,8 @@ class LiveVideo(object):
             'download_href': 'str',
             'file_name': 'str',
             'file_size': 'int',
-            'file_type': 'str'
+            'file_type': 'str',
+            'challenge': 'list[Challenge]'
         }
 
         self.attribute_map = {
@@ -32,7 +33,8 @@ class LiveVideo(object):
             'download_href': 'download_href',
             'file_name': 'file_name',
             'file_size': 'file_size',
-            'file_type': 'file_type'
+            'file_type': 'file_type',
+            'challenge': 'challenge'
         }
 
         self._id = id
@@ -43,6 +45,7 @@ class LiveVideo(object):
         self._file_name = file_name
         self._file_size = file_size
         self._file_type = file_type
+        self._challenge = challenge
 
     @property
     def id(self):
@@ -227,6 +230,14 @@ class LiveVideo(object):
         """
 
         self._file_type = file_type
+
+    @property
+    def challenge(self):
+        return self._challenge
+
+    @challenge.setter
+    def challenge(self, challenge):
+        self._challenge = challenge
 
     def to_dict(self):
         """
