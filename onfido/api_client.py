@@ -250,7 +250,7 @@ class ApiClient(object):
         """
         if data is None:
             return None
-        print(klass)
+
         if type(klass) == str:
             if klass.startswith('list['):
                 sub_kls = re.match('list\[(.*)\]', klass).group(1)
